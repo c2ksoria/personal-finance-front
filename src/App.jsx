@@ -3,8 +3,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const app_port = import.meta.env.VITE_PORT
-console.log(app_port)
+const app_host = import.meta.env.VITE_APP_HOST
+const app_port = import.meta.env.PORT
+const app_port1 = import.meta.env.VITE_PORT
+
+console.log(app_host, app_port, app_port1)
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,7 +22,7 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <h4>{app_port}</h4>
+      <h4>{app_host}</h4>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
