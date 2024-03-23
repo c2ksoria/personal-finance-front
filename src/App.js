@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-const app_port = process.env.REACT_APP_PORT
-console.log(app_port)
+
 function App() {
   return (
     <div className="App">
@@ -18,9 +17,6 @@ function App() {
         >
           Learn React
         </a>
-        <h4>
-          {app_port}
-        </h4>
       </header>
     </div>
   );
