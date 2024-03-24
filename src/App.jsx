@@ -7,8 +7,9 @@ const app_host = import.meta.env.VITE_APP_HOST
 const app_port = import.meta.env.PORT
 const app_port1 = import.meta.env.VITE_PORT
 const backend_port = import.meta.env.VITE_BACKEND_PORT
+const port_back = import.meta.env.PORTAPP
 
-console.log(app_host, app_port, app_port1,backend_port)
+console.log(app_host, app_port, app_port1,backend_port, port_back)
 function App() {
   const [count, setCount] = useState(0)
 
