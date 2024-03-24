@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const back_host = "viaduct.proxy.rlwy.net"
+const back_host = "personal-finance-backend-production.up.railway.app"
 const app_port = import.meta.env.PORT
 const app_port1 = import.meta.env.VITE_PORT
 const backend_port = "31575"
@@ -18,7 +18,7 @@ function App() {
     headers: { "Content-Type": "application/json"
     }
 }
-const url = `http://${back_host}:${backend_port}/v1/getconfig`
+const url = `https://${back_host}/v1/getconfig`
 console.log(url)
 
 const response =  await fetch(url, requestOptions)
