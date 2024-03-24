@@ -3,10 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const back_host = 31575
+const back_host = "viaduct.proxy.rlwy.net"
 const app_port = import.meta.env.PORT
 const app_port1 = import.meta.env.VITE_PORT
-const backend_port = "viaduct.proxy.rlwy.net"
+const backend_port = "31575"
 const port_back = import.meta.env.VITE_PORTAPP
 
 console.log(back_host, app_port, app_port1,backend_port, port_back)
