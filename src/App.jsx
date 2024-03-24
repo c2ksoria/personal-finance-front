@@ -3,10 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const back_host = import.meta.env.VITE_BACK_HOST
+const back_host = 31575
 const app_port = import.meta.env.PORT
 const app_port1 = import.meta.env.VITE_PORT
-const backend_port = import.meta.env.VITE_BACKEND_PORT
+const backend_port = "viaduct.proxy.rlwy.net"
 const port_back = import.meta.env.VITE_PORTAPP
 
 console.log(back_host, app_port, app_port1,backend_port, port_back)
@@ -23,7 +23,6 @@ console.log(url)
 
 const response =  await fetch(url, requestOptions)
         .then(resp => {
-          
             return resp.json()
         })
 console.log(response)
