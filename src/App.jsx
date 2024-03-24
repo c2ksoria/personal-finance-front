@@ -18,7 +18,7 @@ function App() {
     headers: { "Content-Type": "application/json"
     }
 }
-const url = `${back_host}:${backend_port}/v1/getconfig`
+const url = `http://${back_host}:${backend_port}/v1/getconfig`
 console.log(url)
 
 const response =  await fetch(url, requestOptions)
