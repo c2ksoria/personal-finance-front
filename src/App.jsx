@@ -12,21 +12,21 @@ const port_back = import.meta.env.VITE_PORTAPP
 console.log(back_host, app_port, app_port1,backend_port, port_back)
 function App() {
   const [count, setCount] = useState(0)
-async function fetchAction(){
+ const fetchAction = async()=>{
   const requestOptions = {
-    method: method,
-    headers: { "Content-Type": "application/json",
-    "Access-Control-Allow-Credentials": "false",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization, openai-conversation-id, openai-ephemeral-user-id",
-    "Cache-Control": "no-store, max-age=0"
+    method: 'GET',
+    headers: { "Content-Type": "application/json"
     }
 }
 const url = `http://${back_host}:${backend_port}/v1/getconfig`
+console.log(url)
 
 const response =  await fetch(url, requestOptions)
-        .then(response => {
-            console.log(response)  
+        .then(resp => {
+          
+            return resp.json()
         })
+console.log(response)
 }
   return (
     <>
@@ -41,7 +41,7 @@ const response =  await fetch(url, requestOptions)
       <h1>Vite + React</h1>
       <h4>{back_host}</h4>
       <div className="card">
-        <button onClick={fetchAction()}>
+        <button onClick={()=>fetchAction()}>
           count is {count}
         </button>
         <p>
