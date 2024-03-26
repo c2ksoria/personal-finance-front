@@ -1,55 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './Components/Static/Header'
+import Details from './Components/Static/Details'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-const back_host = "personal-finance-backend-production.up.railway.app"
-const app_port = import.meta.env.PORT
-const app_port1 = import.meta.env.VITE_PORT
-const backend_port = "31575"
-const port_back = import.meta.env.VITE_PORTAPP
-
-console.log(back_host, app_port, app_port1,backend_port, port_back)
 function App() {
-  const [count, setCount] = useState(0)
- const fetchAction = async()=>{
-  const requestOptions = {
-    method: 'GET',
-    headers: { "Content-Type": "application/json"
-    }
-}
-const url = `https://${back_host}/v1/getconfig`
-console.log(url)
-
-const response =  await fetch(url, requestOptions)
-        .then(resp => {
-            return resp.json()
-        })
-console.log(response)
-}
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h4>{back_host}</h4>
-      <div className="card">
-        <button onClick={()=>fetchAction()}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <Router>
+        <Routes>
+        <Route path="/" exact element={<Details/>} />
+        </Routes>
+      </Router>
     </>
   )
 }

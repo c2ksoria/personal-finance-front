@@ -1,7 +1,7 @@
 {
   "name": "personal-finance",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,10 +11,18 @@
     "start": "serve dist -s -n -L -p $PORT"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.14",
+    "@mui/material": "^5.15.14",
+    "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "dotenv-flow": "^4.1.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-datepicker": "^6.6.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
     "serve": "^14.2.1"
   },
   "devDependencies": {
