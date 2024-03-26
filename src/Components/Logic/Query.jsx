@@ -10,6 +10,7 @@ if(enviroment==='production'){
 else if(enviroment==='development'){
     begin_url=`http://${api_url}:${api_port}`
 }
+console.log(begin_url)
 const Query = () => {
     const url = `${begin_url}/v1/movements/`
     const method = 'GET'
