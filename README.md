@@ -42,3 +42,18 @@ Worked with mysql as the database engine, `Nodejs` on the backend and `Reactjs` 
 - Individualize the Modal component for create or update new movememt, that is; place it in a separate file as a component to import within the List component; and thus be able to use it from other parts of the code. This is in order to obtain better readability and clarity of the code; meeting the standards of the software development industry.
 
 - Implement registration, login and user authentication; so that many users can keep their own personal records of expenses and income.
+
+## How to Run
+
+### Enviroment Variables
+On develop or production mode you must create a few Enviroment Variables with Vite default configuration for it:
+
+VITE_BACK_HOST, VITE_BACKEND_PORT and VITE_ENVIROMENT, the lastwith "development" or "production" value.
+
+### Run on Develop
+
+npm run dev
+
+### Run on Production
+
+Use or modify start script
